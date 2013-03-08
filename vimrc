@@ -20,6 +20,8 @@
   Bundle 'vim-scripts/searchfold.vim'
   Bundle 'ddollar/nerdcommenter'
   Bundle 'tpope/vim-vividchalk'
+  Bundle 'sophacles/vim-bundle-mako'
+  Bundle 'plasticboy/vim-markdown'
   " add your bundles above
   if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
