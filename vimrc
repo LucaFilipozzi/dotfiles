@@ -22,6 +22,8 @@
   Bundle 'tpope/vim-vividchalk'
   Bundle 'altercation/vim-colors-solarized'
   Bundle 'sukima/xmledit'
+  Bundle 'sophacles/vim-bundle-mako'
+  Bundle 'plasticboy/vim-markdown'
   " add your bundles above
   if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
