@@ -20,6 +20,8 @@
   Bundle 'vim-scripts/searchfold.vim'
   Bundle 'ddollar/nerdcommenter'
   Bundle 'tpope/vim-vividchalk'
+  Bundle 'altercation/vim-colors-solarized'
+  Bundle 'sukima/xmledit'
   Bundle 'sophacles/vim-bundle-mako'
   Bundle 'plasticboy/vim-markdown'
   " add your bundles above
@@ -57,3 +59,14 @@ set smartcase
 colorscheme vividchalk
 syntax on
 
+" java
+augroup java
+  autocmd!
+  autocmd FileType java set ts=4 sw=4 et sm si ai sta
+augroup END
+
+" xslt
+augroup xslt
+  autocmd!
+  autocmd FileType xslt set ts=2 sw=2 et sm si ai sta
+augroup END
