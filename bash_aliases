@@ -1,7 +1,9 @@
 # vim: set ft=sh ts=4 sw=4 et ai si:
 
+alias ls='ls --color=auto'
 alias ll='ls -l'
 alias la='ls -A'
+alias l='ls -CF'
 
 export PAGER=less
 export EDITOR=vim
