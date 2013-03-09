@@ -1,0 +1,19 @@
+# vim: set ft=sh ts=4 sw=4 et ai si:
+
+alias ll='ls -l'
+alias la='ls -A'
+
+export PAGER=less
+export EDITOR=vim
+export VISUAL=vim
+
+function prompt_command() {   
+    if [[ -n $TMUX ]]; then
+        NEW_SSH_AUTH_SOCK=`tmux show-environment | egrep "^SSH_AUTH_SOCK" | cut -d = -f 2`
+        if [[ -n $NEW_SSH_AUTH_SOCK ]] && [[ -S $NEW_SSH_AUTH_SOCK ]]; then 
+            SSH_AUTH_SOCK=$NEW_SSH_AUTH_SOCK  
+        fi
+    fi
+}
+
+export PROMPT_COMMAND=prompt_command
