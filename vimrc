@@ -24,6 +24,8 @@
   Bundle 'sukima/xmledit'
   Bundle 'sophacles/vim-bundle-mako'
   Bundle 'plasticboy/vim-markdown'
+  Bundle 'rodjek/vim-puppet'
+  Bundle 'godlygeek/tabular'
   " add your bundles above
   if iCanHazVundle == 0
     echo "Installing Bundles, please ignore key map error messages"
@@ -63,6 +65,12 @@ syntax on
 augroup java
   autocmd!
   autocmd FileType java set ts=4 sw=4 et sm si ai sta
+augroup END
+
+" puppet
+augroup puppet
+  autocmd!
+  autocmd Filetype puppet set sm si ai sta
 augroup END
 
 " xslt

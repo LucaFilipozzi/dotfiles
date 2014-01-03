@@ -5,6 +5,7 @@ alias ll='ls -l'
 alias la='ls -A'
 alias l='ls -CF'
 
+export LANG=en_CA.UTF-8
 export PAGER=less
 export EDITOR=vim
 export VISUAL=vim
