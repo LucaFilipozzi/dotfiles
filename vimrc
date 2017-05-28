@@ -7,18 +7,6 @@ Plug 'LucaFilipozzi/vim-commentary'
 Plug 'LucaFilipozzi/vim-protobuf'
 Plug 'LucaFilipozzi/vim-flavored-markdown'
 Plug 'LucaFilipozzi/vim-go'
-"Plug 'Lokaltog/vim-easymotion'
-"Plug 'Lokaltog/vim-powerline'
-"Plug 'jngeist/vim-multimarkdown'
-"Plug 'vim-scripts/searchfold.vim'
-"Plug 'ddollar/nerdcommenter'
-"Plug 'tpope/vim-vividchalk'
-"Plug 'altercation/vim-colors-solarized'
-"Plug 'sukima/xmledit'
-"Plug 'sophacles/vim-bundle-mako'
-"Plug 'plasticboy/vim-markdown'
-"Plug 'rodjek/vim-puppet'
-"Plug 'godlygeek/tabular'
 call plug#end()
 
 set list
