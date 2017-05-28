@@ -1,72 +1,48 @@
-" vim: set ts=2 sw=2 et fdm=marker:
+call plug#begin('~/.vim/plugged')
+Plug 'LucaFilipozzi/vim-sensible'
+Plug 'LucaFilipozzi/vim-airline'
+Plug 'LucaFilipozzi/vim-cursor'
+Plug 'LucaFilipozzi/vim-vividchalk'
+Plug 'LucaFilipozzi/vim-commentary'
+Plug 'LucaFilipozzi/vim-protobuf'
+Plug 'LucaFilipozzi/vim-flavored-markdown'
+Plug 'LucaFilipozzi/vim-go'
+call plug#end()
 
-" {{{ Setting up Vundle - the vim plugin bundler
-  let iCanHazVundle=1
-  let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
-  if !filereadable(vundle_readme)
-    echo "Installing Vundle.."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    let iCanHazVundle=0
-  endif
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
-  Bundle 'gmarik/vundle'
-  " add your bundles below
-  Bundle 'Lokaltog/vim-easymotion'
-  Bundle 'Lokaltog/vim-powerline'
-  Bundle 'jngeist/vim-multimarkdown'
-  Bundle 'vim-scripts/searchfold.vim'
-  Bundle 'ddollar/nerdcommenter'
-  Bundle 'tpope/vim-vividchalk'
-  Bundle 'altercation/vim-colors-solarized'
-  Bundle 'sukima/xmledit'
-  Bundle 'sophacles/vim-bundle-mako'
-  Bundle 'plasticboy/vim-markdown'
-  " add your bundles above
-  if iCanHazVundle == 0
-    echo "Installing Bundles, please ignore key map error messages"
-    echo ""
-    :BundleInstall
-  endif
-" }}}
-
-" {{{ Setting up RestoreCursor capability
-  function! RestoreCursor()
-    if line("'\"") <= line("$")
-      normal! g`"
-      return 1
-    endif
-  endfunction
-
-  augroup RestoreCursor
-    autocmd!
-    autocmd BufWinEnter * call RestoreCursor()
-  augroup END
-" }}}
-
+set list
+set listchars=tab:»­,trail:·,extends:»,precedes:«,nbsp:·
 set modeline
 set modelines=2
-set laststatus=2
-set encoding=utf-8
-
-set hlsearch
-set incsearch
-set ignorecase
-set smartcase
-
 colorscheme vividchalk
 syntax on
 
-" java
-augroup java
+augroup go " {{{
+  autocmd!
+  autocmd FileType go set ts=4 sw=4 noet sm si ai sta
+augroup END " }}}
+augroup java " {{{
   autocmd!
   autocmd FileType java set ts=4 sw=4 et sm si ai sta
-augroup END
-
-" xslt
-augroup xslt
+augroup END " }}}
+augroup markdown " {{{
   autocmd!
-  autocmd FileType xslt set ts=2 sw=2 et sm si ai sta
-augroup END
+  autocmd BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
+augroup END " }}}
+augroup proto " {{{
+  autocmd!
+  autocmd FileType proto set ts=2 sw=2 et sm si ai sta
+augroup END " }}}
+augroup vimrc " {{{
+  autocmd!
+  autocmd BufWritePost .vimrc source $MYVIMRC
+augroup END " }}}
+augroup xml " {{{
+  autocmd!
+  autocmd FileType xml set ts=4 sw=4 et sm si ai sta
+augroup END " }}}
+augroup xslt " {{{
+  autocmd!
+  autocmd FileType xslt set ts=4 sw=4 et sm si ai sta
+augroup END " }}}
+
+" vim: ts=2 sw=2 et fdm=marker:
