@@ -7,6 +7,18 @@ Plug 'LucaFilipozzi/vim-commentary'
 Plug 'LucaFilipozzi/vim-protobuf'
 Plug 'LucaFilipozzi/vim-flavored-markdown'
 Plug 'LucaFilipozzi/vim-go'
+"Plug 'Lokaltog/vim-easymotion'
+"Plug 'Lokaltog/vim-powerline'
+"Plug 'jngeist/vim-multimarkdown'
+"Plug 'vim-scripts/searchfold.vim'
+"Plug 'ddollar/nerdcommenter'
+"Plug 'tpope/vim-vividchalk'
+"Plug 'altercation/vim-colors-solarized'
+"Plug 'sukima/xmledit'
+"Plug 'sophacles/vim-bundle-mako'
+"Plug 'plasticboy/vim-markdown'
+"Plug 'rodjek/vim-puppet'
+"Plug 'godlygeek/tabular'
 call plug#end()
 
 set list
@@ -23,6 +35,7 @@ augroup END " }}}
 augroup java " {{{
   autocmd!
   autocmd FileType java set ts=4 sw=4 et sm si ai sta
+<<<<<<< HEAD
 augroup END " }}}
 augroup markdown " {{{
   autocmd!
@@ -33,6 +46,18 @@ augroup proto " {{{
   autocmd FileType proto set ts=2 sw=2 et sm si ai sta
 augroup END " }}}
 augroup vimrc " {{{
+=======
+augroup END
+
+" puppet
+augroup puppet
+  autocmd!
+  autocmd Filetype puppet set sm si ai sta
+augroup END
+
+" xslt
+augroup xslt
+>>>>>>> a404e8027449b616db18e0c17f78f3929c81441e
   autocmd!
   autocmd BufWritePost .vimrc source $MYVIMRC
 augroup END " }}}
@@ -45,4 +70,4 @@ augroup xslt " {{{
   autocmd FileType xslt set ts=4 sw=4 et sm si ai sta
 augroup END " }}}
 
-" vim: ts=2 sw=2 et fdm=marker:
+" vim: set ts=2 sw=2 et fdm=marker:
