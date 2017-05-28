@@ -23,7 +23,6 @@ augroup END " }}}
 augroup java " {{{
   autocmd!
   autocmd FileType java set ts=4 sw=4 et sm si ai sta
-<<<<<<< HEAD
 augroup END " }}}
 augroup markdown " {{{
   autocmd!
@@ -33,21 +32,13 @@ augroup proto " {{{
   autocmd!
   autocmd FileType proto set ts=2 sw=2 et sm si ai sta
 augroup END " }}}
-augroup vimrc " {{{
-=======
-augroup END
-
-" puppet
-augroup puppet
+augroup puppet " {{{
   autocmd!
   autocmd Filetype puppet set sm si ai sta
-augroup END
-
-" xslt
-augroup xslt
->>>>>>> a404e8027449b616db18e0c17f78f3929c81441e
+augroup END " }}}
+augroup vimrc " {{{
   autocmd!
-  autocmd BufWritePost .vimrc source $MYVIMRC
+  autocmd BufWritePost .vimrc,.dotfiles/vimrc source $MYVIMRC
 augroup END " }}}
 augroup xml " {{{
   autocmd!
