@@ -7,13 +7,22 @@ Plug 'LucaFilipozzi/vim-commentary'
 Plug 'LucaFilipozzi/vim-protobuf'
 Plug 'LucaFilipozzi/vim-flavored-markdown'
 Plug 'LucaFilipozzi/vim-go'
+Plug 'LucaFilipozzi/vim-solarized8'
+Plug 'LucaFilipozzi/vim-easymotion'
 call plug#end()
 
+set cursorline
+set hlsearch
+set ignorecase
 set list
 set listchars=tab:»­,trail:·,extends:»,precedes:«,nbsp:·
 set modeline
 set modelines=2
-colorscheme vividchalk
+set scrolloff=3
+set smartcase
+set termguicolors
+" colorscheme vividchalk
+colorscheme solarized8_dark
 syntax on
 
 augroup go " {{{
