@@ -1,3 +1,5 @@
+set -u fish_color_command yellow
+
 set -x EDITOR nvim
 set -x VISUAL nvim
 set -x PAGER less
