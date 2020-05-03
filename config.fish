@@ -12,6 +12,4 @@ set -x fish_user_paths $HOME/bin $fish_user_paths
 set -x AWS_VAULT_BACKEND pass
 set -x AWS_VAULT_PASS_CMD /usr/local/bin/gopass
 
-source ~/.config/fish/config-local.fish
-
 #fish_vi_key_bindings
